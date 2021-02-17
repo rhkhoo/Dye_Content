@@ -33,7 +33,7 @@ Making the right decisions about food is especially important when it comes to o
 
 # Experimental Design
 
-Calibration curves for Red 40, Blue 1, and Yellow 5 were constructed by creating a stock of each dye and diluting each stock according to the dilution schemes shown in Tables 3-5. Each standard was analyzed using a Cary Scan 50 UV-Visible spectrophotometer. The absorbance of each standard at the dye’s wavelength of maximum absorbance (λmax) was measured using deionized water as a blank. The data were compiled into a calibration curve for each dye using sklearn's LinearRegression. The slopes of these calibration curves were used as the molar absorptivities for analysis since the pathlength of the cell was 1.00 cm and the concentration was in molarity as per the Beer-Lambert Law. <br><br>
+Calibration curves for Red 40, Blue 1, and Yellow 5 were constructed by creating a stock of each dye and diluting each stock according to the dilution schemes shown the Appendix. Each standard was analyzed using a Cary Scan 50 UV-Visible spectrophotometer. The absorbance of each standard at the dye’s wavelength of maximum absorbance (λmax) was measured using deionized water as a blank. The data were compiled into a calibration curve for each dye using sklearn's LinearRegression. The slopes of these calibration curves were used as the molar absorptivities for analysis since the pathlength of the cell was 1.00 cm and the concentration was in molarity as per the Beer-Lambert Law. <br><br>
  The dyes were separated from the samples by pulling the samples through a Supelclean LC-18 SepPak. The SepPak was cleaned with HPLC-grade methanol and then conditioned with a 1% acetic acid solution. One drop of this acetic acid solution was added to 3 mL of each sample to ensure the dyes would adsorb to the packing. The solution that came off the packing was analyzed using the UV-Visible spectrophotometer to see if anything else in the solution absorbed at the dye in question’s λmax. If the sample contained no component other than the dye that absorbed at the λmax, the sample was analyzed using the UV-vis without any preparation. If a sample contained compounds other than the three dyes in question that absorb at the λmax of any of the dyes, the absorbance of the other compound was subtracted from the absorbance of the sample before any calculations were done. <br><br>
 The Kool-Aid Bursts (Cherry, Grape, and Fruit Punch), Gatorade Fruit Punch, Gatorade Tropical Cooler, Hawaiian Punch, the Powerades (Blackberry, Mountain Berry, Lemon Lime, and Fruit Punch), the powdered Kool Aids (Grape and Tropical Punch), and the Nyquil had an absorbance too high for the spectrophotometer to measure. This absorbance was lowered by performing a 25-fold dilution on the Kool Aid Bursts (Cherry, Grape, and Fruit Punch), the G2 Fruit Punch, the Hawaiian Punch, the powdered Kool Aids (Tropical Punch and Grape), two Powerades (Blackberry and Fruit Punch), and the Nyquil. A 12.5-fold dilution was performed on the remaining Powerades (Lemon Lime and Mountain Berry Blast), and Gatorade Tropical Cooler. Mountain Dew was decarbonated prior to analysis by placing a beaker containing the liquid and a magnetic stir bar on a stir plate and allowing the beverage to be stirred for several minutes.
 
@@ -50,23 +50,36 @@ Using the Linear Regression models for each dye, the mass of dye per serving of 
 
 # Results
 
-Sample	Blue 1 (mg)	Red 40 (mg)	Yellow 5 (mg)
-Kool Aid Jammers Grape	0.044	0.11	-
-Gatorade G2 Grape	0.67	1.2	-
-Gatorade G2 Fruit Punch	-	15	-
-Gatorade Tropical Cooler	0.92	-	25
-Gatorade Icy Charge	0.71	-	-
-Powerade Twisted Blackberry	0.14	45	-
-Powerade Fruit Punch	-	48	-
-Powerade Lemon Lime	-	-	69
-Powerade Mountain Berry Blast	3.0	-	-
-Kool Aid Bursts Fruit Punch	-	15	-
-Kool Aid Bursts Grape	1.3	3.2	-
-Kool Aid Bursts Cherry	-	32	-
-Kool Aid Grape Powder	1.2	3.3	-
-Kool Aid Tropical Punch Powder	-	16	-
-Hawaiian Punch Fruit Juicy Red	-	22	-
-Mountain Dew	-	-	6.1
-Pedialyte Grape	0.22	0.73	-
-Pedialyte Strawberry	0.012	2.1	-
-Nyquil Children’s Cold & Cough Cherry	-	7.0	-
+Mass of Dye per Serving of Sample<br>
+![Results Table](https://github.com/rhkhoo/Dye_Content/blob/main/Images/resultstable.png)<br>
+
+# Discussion
+
+The goal of quantifying FD&C dyes in beverages popular among children was ultimately achieved. Overall, the mass of Blue 1 in all the samples is much less than masses of Red 40 and Yellow 5. This is likely due to the fact that Blue 1 has such a high molar absorptivity; therefore a very small mass of dye creates an intense color. Red 40 and Yellow 5 also have relatively high molar absorptivites, so the high amount of these dyes in some of the beverages is surprising. Quantities per serving found from this study were similar to those found in the literature.<sup>9,10</sup> However, the studies in the literature tested multiple samples of each beverage while this study tested only one sample per beverage. Precision could have been improved with multiple samples of each beverage and medicine. <br><br>
+One important source of error is the fact that Yellow 5 would not adsorb to the LC-18 packing; therefore, that it was assumed nothing else in the beverage absorbed at 429 nm. If one of these beverages did contain a substance that absorbed at 429 nm, the recorded mass of Yellow 5 in that beverage would be higher than the true value. An alternative method for separating dyes from samples needs to be developed to correct for this possible error. Another possible source of error is the unknown particulates in Mountain Dew and Powerade Lemon Lime that caused the baseline to slope upward. These particulates may have cause refraction within the sample, leading to an absorbance higher than the true value.
+
+# Conclusions
+
+Consumers have a right to know how much AFCs are in their food and beverages. Everything we consume has guidelines as to how much we need to maintain our health and how much we can consume without any adverse health effects. Nutrition labels report a percent daily value (%DV) for the carbohydrates, protein, fats, vitamins, and minerals in our food and beverages, but there is no %DV listed on packaging for additives like AFCs.<br><br>
+The FDA recommends that people consume no more than 7 milligrams of Red 40, 6 milligrams of Blue 1, and 7.5 milligrams of Yellow 5 per kilogram of body weight per day<sup>.8</sup> So, a child weighing 27 kg (60 lbs), should consume no more than 189 mg of Red 40, 162 mg of Blue 1, and 202 mg of Yellow 5 in a single day. This child would receive a little more than a third of the recommended daily dose of Yellow 5 by drinking just one serving of Lemon Lime Powerade. This same child would receive more than a fourth of the recommended daily dose of Red 40 from a serving of Fruit Punch Powerade. It should be noted than some children may consume more than one serving of these drinks in a day and that beverages are not the only source of these artificial dyes a child may consume. <br><br>
+Should all AFCs be banned and natural dyes adopted? Why take the risk with artificial dyes when there are natural alternatives? As stated previously, artificial dyes are less expensive and more stable than their natural counterparts, and there has not been enough evidence for the FDA to completely prohibit them. More research is needed to study the effects of long-term exposure to AFCs. <br><br>
+ In 2008, the FDA was petitioned for a complete ban on Red 3 after research linking high doses of Red 3 with cancer in rats.<sup>11</sup> The petition stated that the partial ban instituted in 1990 violated the Delaney clause, which states that the FDA may not approve any food additive that is shown to cause cancer in humans or animals in any dose, but the FDA states that there is an exception to the clause when the concentration of the carcinogen is less than one part per million and the danger is “negligible.”<sup>12</sup> It is for this reason that possibly carcinogenic Red 3 is still used for coloring maraschino cherries, some types of bubble gum, and other snack foods. <br><br>
+Many companies are already switching from artificial dyes to natural ones without the FDA’s influence. These dyes are mainly plant-based conjugated system. Many of the natural dyes are antioxidants, so switching to natural dyes would also add this health benefit. These natural dyes are most likely safer alternatives to the synthetic organic dyes that were once lauded as the safer alternatives themselves. <br><br>
+ “Natural” does not always mean safe, however. As with Red 40, carmine, a natural dye extracted from the red shell of the cochineal insect, can cause serious allergic reactions.<sup>13</sup> Further research is needed to determine the safety of these dyes, and perhaps their quantities in various products would be of interest. 
+ 
+# References
+
+1. Vinita Sharma, Harold T. McKone, and Peter G. Markow. *Journal of Chemical Education* **2011**, 88 (1), 24-28.
+2. McKone, H. T. *Bull. Hist. Chem.* **1991**, 10,25–31
+3. Bond, Annie B.  EcoWatch. www.ecowatch.com/food-dye-children-behavior-2537569911.html. (accessed Apr 9, 2018)
+4.  Newsome, A. G., Culver, C. A., & Breemen, R. B. *J. Agric. Food Chem.* **2014**, 62(28), 6498-6511
+5.  Allam, K. V., Kumar G. P. *International Journal of Pharmacy and Pharmaceutical Sciences*. **2011**, 3(3), 13-21
+6. Stockman, J. *Yearbook of Pediatrics*. **2009**, 94-95.
+7. Batada, A., & Jacobson, M. F. *Clinical Pediatrics*. **2016**, 55(12), 1113-1119. 
+8. Aungst, J. *Background Document for the Food Advisory Committee*. **2011**, http://www.fda.gov/downloads/AdvisoryCommittees/CommitteesMeetingMaterials/FoodAdvisoryCommittee/UCM248549.pdf (accessed Oct. 23, 2016)
+9. Stevens, L. J., Burgess, J. R., Stochelski, M. A., & Kuczek, T. *Clinical Pediatrics*. **2013**, 53(2), 133-140. 
+10.  Sigmann, S. B., & Wheeler, D. E. *J. Chem. Educ*. **2004**, 81(10), 1475.
+11. Henkel, J. *FDA Consumer magazine*. **1993**, 27(10).
+12. Merrill, Richard A. *Annual Review of Public Health*. **1997**, 18, 313-40.
+13.  Tabar, A.I.; Acero, S.; Arregui, C.; Urdánoz, M.; Quirce, S. *Anales Del Sistema Sanitario De Navarra*. **2003**. 26 (2): 65–73.
+
