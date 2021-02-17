@@ -37,3 +37,36 @@ Calibration curves for Red 40, Blue 1, and Yellow 5 were constructed by creating
  The dyes were separated from the samples by pulling the samples through a Supelclean LC-18 SepPak. The SepPak was cleaned with HPLC-grade methanol and then conditioned with a 1% acetic acid solution. One drop of this acetic acid solution was added to 3 mL of each sample to ensure the dyes would adsorb to the packing. The solution that came off the packing was analyzed using the UV-Visible spectrophotometer to see if anything else in the solution absorbed at the dye in question’s λmax. If the sample contained no component other than the dye that absorbed at the λmax, the sample was analyzed using the UV-vis without any preparation. If a sample contained compounds other than the three dyes in question that absorb at the λmax of any of the dyes, the absorbance of the other compound was subtracted from the absorbance of the sample before any calculations were done. <br><br>
 The Kool-Aid Bursts (Cherry, Grape, and Fruit Punch), Gatorade Fruit Punch, Gatorade Tropical Cooler, Hawaiian Punch, the Powerades (Blackberry, Mountain Berry, Lemon Lime, and Fruit Punch), the powdered Kool Aids (Grape and Tropical Punch), and the Nyquil had an absorbance too high for the spectrophotometer to measure. This absorbance was lowered by performing a 25-fold dilution on the Kool Aid Bursts (Cherry, Grape, and Fruit Punch), the G2 Fruit Punch, the Hawaiian Punch, the powdered Kool Aids (Tropical Punch and Grape), two Powerades (Blackberry and Fruit Punch), and the Nyquil. A 12.5-fold dilution was performed on the remaining Powerades (Lemon Lime and Mountain Berry Blast), and Gatorade Tropical Cooler. Mountain Dew was decarbonated prior to analysis by placing a beaker containing the liquid and a magnetic stir bar on a stir plate and allowing the beverage to be stirred for several minutes.
 
+![Calibration curve for Red 40](https://github.com/rhkhoo/Dye_Content/blob/main/Images/red40.png) <br>
+The R<sup>2</sup> value for the Red 40 calibration curve is 0.99948
+
+![Calibration curve for Blue 1](https://github.com/rhkhoo/Dye_Content/blob/main/Images/blue1.png)<br>
+The R<sup>2</sup> value for the Blue 1 calibration curve is 0.99998
+
+![Calibration curve for Yellow 5](https://github.com/rhkhoo/Dye_Content/blob/main/Images/yellow5.png)<br>
+The R<sup>2</sup> value for the Yellow 5 calibration curve is 0.99991
+<br><br>
+Using the Linear Regression models for each dye, the mass of dye per serving of sample can be determined.
+
+# Results
+
+Sample	Blue 1 (mg)	Red 40 (mg)	Yellow 5 (mg)
+Kool Aid Jammers Grape	0.044	0.11	-
+Gatorade G2 Grape	0.67	1.2	-
+Gatorade G2 Fruit Punch	-	15	-
+Gatorade Tropical Cooler	0.92	-	25
+Gatorade Icy Charge	0.71	-	-
+Powerade Twisted Blackberry	0.14	45	-
+Powerade Fruit Punch	-	48	-
+Powerade Lemon Lime	-	-	69
+Powerade Mountain Berry Blast	3.0	-	-
+Kool Aid Bursts Fruit Punch	-	15	-
+Kool Aid Bursts Grape	1.3	3.2	-
+Kool Aid Bursts Cherry	-	32	-
+Kool Aid Grape Powder	1.2	3.3	-
+Kool Aid Tropical Punch Powder	-	16	-
+Hawaiian Punch Fruit Juicy Red	-	22	-
+Mountain Dew	-	-	6.1
+Pedialyte Grape	0.22	0.73	-
+Pedialyte Strawberry	0.012	2.1	-
+Nyquil Children’s Cold & Cough Cherry	-	7.0	-
