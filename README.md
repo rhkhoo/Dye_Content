@@ -31,6 +31,8 @@ Making the right decisions about food is especially important when it comes to o
 6. **λmax** - the wavelength of light at which a substance absorbs the maximum amount of light <br><br>
 7. **Molar mass** - the mass of substance in one mole, usually measured in grams per mole<br><br>
 
+![four bottles of colorful sports drinks](https://github.com/rhkhoo/Dye_Content/blob/main/Images/samples.png.jpg)
+
 # Experimental Design
 
 Calibration curves for Red 40, Blue 1, and Yellow 5 were constructed by creating a stock of each dye and diluting each stock according to the dilution schemes shown the Appendix. Each standard was analyzed using a Cary Scan 50 UV-Visible spectrophotometer. The absorbance of each standard at the dye’s wavelength of maximum absorbance (λmax) was measured using deionized water as a blank. The data were compiled into a calibration curve for each dye using sklearn's LinearRegression. The slopes of these calibration curves were used as the molar absorptivities for analysis since the pathlength of the cell was 1.00 cm and the concentration was in molarity as per the Beer-Lambert Law. <br><br>
@@ -46,7 +48,7 @@ The R<sup>2</sup> value for the Blue 1 calibration curve is 0.99998
 ![Calibration curve for Yellow 5](https://github.com/rhkhoo/Dye_Content/blob/main/Images/yellow5.png)<br>
 The R<sup>2</sup> value for the Yellow 5 calibration curve is 0.99991
 <br><br>
-Using the Linear Regression models for each dye, the mass of dye per serving of sample can be determined.
+Using the Linear Regression models for each dye, the mass of dye per serving of sample can be determined. Sample calculations can be found in the Appendix.
 
 # Results
 
